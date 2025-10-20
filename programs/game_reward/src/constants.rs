@@ -1,0 +1,1 @@
+pub const DEFAULT_CHECKIN_INTERVAL: u64 = 60; // 1 minutes
