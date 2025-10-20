@@ -2,11 +2,12 @@ use anchor_lang::prelude::*;
 use crate::states::config::*;
 use crate::constants::DEFAULT_CHECKIN_INTERVAL;
 
-pub fn handler(ctx: Context<InitializeConfig>, points_to_claim: u64) -> Result<()> {
+pub fn handler(ctx: Context<InitializeConfig>, points_to_claim: u64, reward_amount: u64) -> Result<()> {
     let config = &mut ctx.accounts.config;
     config.admin = *ctx.accounts.admin.key;
-    config.point_to_claim = points_to_claim;
+    config.points_to_claim = points_to_claim;
     config.checkin_interval_seconds = DEFAULT_CHECKIN_INTERVAL;
+    config.reward_amount = reward_amount;
     Ok(())
 }
 

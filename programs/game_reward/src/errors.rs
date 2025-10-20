@@ -6,4 +6,8 @@ pub enum ErrorCode {
     Overflow,
     #[msg("Check-in too frequent")]
     TooFrequentCheckIn,
+    #[msg("Not enough points to claim")] 
+    NotEnoughPoints,
+    #[msg("Unauthorized: only admin can call")] 
+    Unauthorized,
 }
