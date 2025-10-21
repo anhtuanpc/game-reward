@@ -1,0 +1,17 @@
+{
+  "timestamp": "2025-10-21T04:54:23.168Z",
+  "cluster": "devnet",
+  "programId": "9aTkaPCVPwJVP1rsps4GyBdCHeGTnQCtF6FHACocBwjZ",
+  "admin": "BqMmeARUkvJYaBop3Lxjk7zFBAoe1KcUDUiumf5kzr3G",
+  "configPda": "A9H3xmtiNBaqb6iLP2qbv17ECviMvYDRJefiMgkHWMvx",
+  "mint": "C8TSTSiaJNuiMyiHLokjJNUuP9nUj1odp91KcxDexmiX",
+  "adminAta": "7YT4kzp4u5JoUrVdvDHzVB6khPmDJLxAjGapboUsVdhx",
+  "vaultPda": "GZNxeeESViiRCLxAZfLJnpksLDB1AEYrYpWCugBKJW6c",
+  "vaultAuthority": "GZNxeeESViiRCLxAZfLJnpksLDB1AEYrYpWCugBKJW6c",
+  "explorerLinks": {
+    "program": "https://explorer.solana.com/address/9aTkaPCVPwJVP1rsps4GyBdCHeGTnQCtF6FHACocBwjZ?cluster=devnet",
+    "config": "https://explorer.solana.com/address/A9H3xmtiNBaqb6iLP2qbv17ECviMvYDRJefiMgkHWMvx?cluster=devnet",
+    "mint": "https://explorer.solana.com/address/C8TSTSiaJNuiMyiHLokjJNUuP9nUj1odp91KcxDexmiX?cluster=devnet",
+    "vault": "https://explorer.solana.com/address/GZNxeeESViiRCLxAZfLJnpksLDB1AEYrYpWCugBKJW6c?cluster=devnet"
+  }
+}

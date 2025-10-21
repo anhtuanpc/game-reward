@@ -140,6 +140,7 @@ The test suite includes:
 ### Test Configuration
 
 For faster testing, the test suite uses:
+
 - `CHECKIN_INTERVAL = 0` (no wait time between check-ins)
 - `POINTS_TO_CLAIM = 3` (need 3 points to claim)
 - `REWARD_AMOUNT = 10,000,000` (10 tokens with 6 decimals)
@@ -171,30 +172,37 @@ For faster testing, the test suite uses:
 ## Program Instructions
 
 ### 1. `initialize_config`
+
 Initialize the global configuration for the game reward system.
 
 **Parameters:**
+
 - `points_to_claim: u64` - Points needed to claim rewards
 - `reward_amount: u64` - Token amount per claim
 - `checkin_interval_seconds: u64` - Minimum seconds between check-ins
 
 ### 2. `check_in`
+
 Allow users to check in and earn points.
 
 **Features:**
+
 - Creates user score account on first check-in
 - Enforces rate limiting based on configured interval
 - Emits check-in events
 
 ### 3. `claim`
+
 Allow users to claim token rewards using their accumulated points.
 
 **Requirements:**
+
 - User must have enough points
 - Valid vault with sufficient token balance
 - Proper token account setup
 
 ### 4. `fund_vault` (Testing)
+
 Fund the reward vault with tokens for testing purposes.
 
 ## Troubleshooting
@@ -202,6 +210,7 @@ Fund the reward vault with tokens for testing purposes.
 ### Common Issues
 
 1. **Program ID Mismatch**
+
    ```bash
    # Re-sync keys if you get program ID errors
    anchor keys sync
@@ -210,12 +219,14 @@ Fund the reward vault with tokens for testing purposes.
    ```
 
 2. **Local Validator Issues**
+
    ```bash
    # Reset local validator
    solana-test-validator --reset
    ```
 
 3. **Insufficient SOL**
+
    ```bash
    # Airdrop SOL for testing
    solana airdrop 5
@@ -234,16 +245,19 @@ Fund the reward vault with tokens for testing purposes.
 If `anchor keys sync` fails or you need to manually sync:
 
 1. Generate new keypair:
+
    ```bash
    solana-keygen new -o target/deploy/game_reward-keypair.json --force
    ```
 
 2. Get the program ID:
+
    ```bash
    solana-keygen pubkey target/deploy/game_reward-keypair.json
    ```
 
 3. Update `Anchor.toml`:
+
    ```toml
    [programs.localnet]
    game_reward = "YOUR_NEW_PROGRAM_ID"
@@ -266,6 +280,7 @@ If `anchor keys sync` fails or you need to manually sync:
 ### Environment Variables
 
 Create `.env` file for custom configurations:
+
 ```bash
 ANCHOR_PROVIDER_URL=http://localhost:8899
 ANCHOR_WALLET=~/.config/solana/id.json
@@ -288,6 +303,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Support
 
 If you encounter any issues:
+
 1. Check the [Troubleshooting](#troubleshooting) section
 2. Review the [Anchor Documentation](https://www.anchor-lang.com/)
 3. Open an issue on GitHub with detailed error messages and steps to reproduce
