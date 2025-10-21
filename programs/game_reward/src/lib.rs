@@ -24,6 +24,15 @@ pub mod game_reward {
     pub fn claim(ctx: Context<Claim>) -> Result<()> {
         instructions::claim::handler(ctx)
     }
+
+    pub fn create_mock_token(ctx: Context<CreateMockToken>, decimals: u8) -> Result<()> {
+        instructions::mock_token::create_mock_token_handler(ctx, decimals)
+    }
+
+
+    pub fn fund_vault(ctx: Context<FundVault>, amount: u64) -> Result<()> {
+        instructions::mock_token::fund_vault_handler(ctx, amount)
+    }
 }
 
 #[derive(Accounts)]
